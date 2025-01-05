@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="src\generator\generator.c" />
     <ClCompile Include="src\main.c" />
-    <ClCompile Include="src\MakeFile" />
+    <ClCompile Include="MakeFile" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\generator\generator.h" />

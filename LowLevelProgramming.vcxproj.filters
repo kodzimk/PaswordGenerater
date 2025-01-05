@@ -21,7 +21,7 @@
     <ClCompile Include="src\generator\generator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\MakeFile">
+    <ClCompile Include="MakeFile">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
