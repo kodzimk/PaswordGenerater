@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include"generator/generator.h"
 
 int main()
@@ -21,5 +20,5 @@ int main()
 	}
 
 
-	return -1;
+	return 0;
 }

@@ -7,6 +7,7 @@
 */
 void gen_start(int size,int* symbols,int* numbers,int* upLet,int* downLet)
 {
+
 	printf("Press 'k' to use numbers\n");
 	printf("Press 'l' to use Upper Letters\n");
 	printf("Press 'j' to use Down Letters\n");
@@ -46,17 +47,52 @@ void gen_start(int size,int* symbols,int* numbers,int* upLet,int* downLet)
 /*
 * generate - actual function of generating password
 * param(size) - length of password,some paramaters for password
-* generating password rigth here
+* generating password right here
 */
 void generate(int size, int symbols, int numbers, int upLet, int downLet)
 {
 	system("cls");
 	char* arr = (char*)malloc(size * sizeof(char));
 
+	int count = 0;
+	int symbol = 0;
+	int number = 0;
+	int up = 0;
+	int down = 0;
+
+
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = '1';
+		while (1)
+		{		
+			int random = rand() % 3 + 1;
+			if (random == 1 && numbers == 1)
+			{
+				random = rand() % 8 + 1;
+				arr[i] = random + '0';
+				break;
+			}
+			else if (random == 2 && symbols == 1)
+			{
+				random = rand() % 6 + 10;
+				arr[i] = random + '0';
+				break;
+			}
+			else if (random == 3 && upLet == 1)
+			{
+				random = rand() % 25 + 65;
+				arr[i] = random + '0';
+				break;
+			}
+			else if (random == 4 && downLet == 1)
+			{
+				random = rand() % 30 + 97;
+				arr[i] = random + '0';
+				break;
+			}
+		}
  	}
+
 	printf("Your generated password: ");
 	fwrite(arr, sizeof(char), size, stdout);
 	printf("\n");
